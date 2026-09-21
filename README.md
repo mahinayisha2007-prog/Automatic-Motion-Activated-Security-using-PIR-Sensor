@@ -60,10 +60,29 @@ Step 7: Save Your Work
 
 
 # Code:
-
-
-
+```c
+int buttonState = 0;
+void setup()
+{
+  pinMode(2, INPUT);
+  pinMode(LED_BUILTIN, OUTPUT);
+}
+void loop()
+{
+  buttonState = digitalRead(2);
+  if (buttonState == HIGH)
+  {
+    digitalWrite(LED_BUILTIN, HIGH);
+  }
+  else
+  {
+    digitalWrite(LED_BUILTIN, LOW);
+  }
+  delay(10);
+}
+```
 # Output:
+<img width="1788" height="931" alt="image" src="https://github.com/user-attachments/assets/5add3067-6cf2-4967-9596-10d38e806940" />
 
 
 
